@@ -63,8 +63,10 @@ public class PlayerController : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);    // jumpHeight = nº metros
         }
 
+        // Agacharse
+        transform.localScale = new Vector3(1f, (Keyboard.current.qKey.isPressed) ? 0.5f : 1f, 1f);
+
+
     }
-
-
 
 }
