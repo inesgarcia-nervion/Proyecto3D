@@ -10260,10 +10260,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moneda
       objectReference: {fileID: 0}
-    - target: {fileID: 5187046978727382626, guid: cbd4c223157c2e94c96c6c30938f119c, type: 3}
-      propertyPath: coinText
-      value: 
-      objectReference: {fileID: 894951882}
     - target: {fileID: 9167308730642098249, guid: cbd4c223157c2e94c96c6c30938f119c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.15
