@@ -5845,7 +5845,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894951880}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -55.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5854,7 +5854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -491.7, y: 133.2}
+  m_AnchoredPosition: {x: -491.70007, y: 133.20001}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &894951882
@@ -10260,6 +10260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moneda
       objectReference: {fileID: 0}
+    - target: {fileID: 5187046978727382626, guid: cbd4c223157c2e94c96c6c30938f119c, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 894951882}
     - target: {fileID: 9167308730642098249, guid: cbd4c223157c2e94c96c6c30938f119c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.15
