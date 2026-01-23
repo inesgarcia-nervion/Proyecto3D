@@ -7,6 +7,7 @@ public class Coin : MonoBehaviour
     private Vector3 initialPosition;
     private Renderer rend;
     private Collider col;
+    private float velocidad = 100f;
 
     void Start()
     {
@@ -16,6 +17,11 @@ public class Coin : MonoBehaviour
 
         if (rend != null) rend.enabled = true;
         if (col != null) col.enabled = true;
+    }
+    void Update()
+    {
+        // Rotar la moneda para un efecto visual
+        transform.Rotate(Vector3.up, velocidad * Time.deltaTime);
     }
 
     public void Collect()
@@ -39,3 +45,4 @@ public class Coin : MonoBehaviour
         if (col != null) col.enabled = true;
     }
 }
+
