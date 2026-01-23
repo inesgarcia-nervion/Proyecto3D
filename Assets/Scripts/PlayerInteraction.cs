@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class Inter : MonoBehaviour
 {
     float range = 2.0f; // Distancia máxima de interacción
@@ -22,28 +23,20 @@ public class Inter : MonoBehaviour
             // Aquí el jugador está mirando un objeto interactuable
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
-                DoInteraction(hit.collider.gameObject);
-            }
-        }
-        if (Physics.Raycast(ray, out hit, range, Layer))
-        {
-            // Aquí el jugador está mirando un objeto interactuable
-            if (Keyboard.current.cKey.wasPressedThisFrame)
-            {
                 CollectCoin(hit.collider.gameObject);
             }
+          
         }
-    }
-
-    void DoInteraction(GameObject go)
-    {
-        // Lógica de interacción con el objeto
-        Debug.Log(go.name);
+        
     }
 
     void CollectCoin(GameObject go)
     {
-        Debug.Log(go.name);
-        Destroy(go);
+        // Lógica de interacción con el objeto
+        Coin coin = go.GetComponent<Coin>();
+        if (coin != null)
+        {
+            coin.Collect(); // Toda la lógica está en el script Coin
+        }
     }
 }
