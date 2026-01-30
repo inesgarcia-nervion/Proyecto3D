@@ -10,10 +10,6 @@ public class CoinManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
     }
 
     public void AddCoin()

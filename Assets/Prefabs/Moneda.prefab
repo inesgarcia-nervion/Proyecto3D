@@ -140,4 +140,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinManager
   coinsCollected: 0
-  coinText: {fileID: 0}
+  coinText: {fileID: 5085645064597701804, guid: ecd1fc3552ec5944abc77ef797bf09eb, type: 3}
