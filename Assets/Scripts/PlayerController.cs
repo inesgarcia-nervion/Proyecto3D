@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     private Vector3 velocity;
     private float jumpHeight;
+    public float range = 50f; // Alcance del arma
+    public float damage = 10f;
 
     void Update()
     {
@@ -38,7 +40,7 @@ public class PlayerController : MonoBehaviour
         // 3. Cálculo de dirección
         // Calculamos la dirección horizontal (WASD)
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
-        
+
         // Aplicamos la gravedad al valor actual de velocity.y
         velocity.y += gravity * Time.deltaTime;
 
@@ -67,6 +69,23 @@ public class PlayerController : MonoBehaviour
         transform.localScale = new Vector3(1f, (Keyboard.current.qKey.isPressed) ? 0.5f : 1f, 1f);
 
 
-    }
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            Disparar();
+        }
 
+        void Disparar()
+        {
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            if (Physics.Raycast(ray, out RaycastHit hit, range))
+            {
+                // ¿Hemos dado a un enemigo?
+                EnemyHealth enemigo = hit.transform.GetComponent<EnemyHealth>();
+                if (enemigo != null)
+                {
+                    enemigo.RecibirDaño(damage);
+                }
+            }
+        }
+    }
 }

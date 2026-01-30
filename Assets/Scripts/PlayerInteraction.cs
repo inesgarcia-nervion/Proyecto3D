@@ -34,7 +34,7 @@ public class Inter : MonoBehaviour
     {
         // Lógica de interacción con el objeto
         Coin coin = go.GetComponent<Coin>();
-        if (coin != null)
+        if (go.CompareTag("Coin"))
         {
             coin.Collect(); // Toda la lógica está en el script Coin
         }

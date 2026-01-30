@@ -10,7 +10,8 @@ public class CoinManager : MonoBehaviour
 
     void Awake()
     {
-
+        coinText = GameObject.Find("Canvas").GetComponentsInChildren<TextMeshProUGUI>()[0];
+        Instance = this;
     }
 
     public void AddCoin()
