@@ -20,7 +20,7 @@ public class CoinManager : MonoBehaviour
         UpdateHUD();
     }
 
-    void UpdateHUD()
+    public void UpdateHUD()
     {
         if (coinText != null)
             coinText.text = "Monedas: " + coinsCollected;
