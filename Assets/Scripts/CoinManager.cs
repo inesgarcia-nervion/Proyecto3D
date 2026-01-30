@@ -10,6 +10,7 @@ public class CoinManager : MonoBehaviour
 
     void Awake()
     {
+
     }
 
     public void AddCoin()
