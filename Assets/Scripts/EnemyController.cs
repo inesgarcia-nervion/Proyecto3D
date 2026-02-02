@@ -1,15 +1,15 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    public Transform player; // Referencia al jugador
-    public NavMeshAgent agent; // Componente de navegaciÛn
+    public Transform player;
+    public NavMeshAgent agent;
+    private Animator anim;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -17,26 +17,39 @@ public class EnemyController : MonoBehaviour
         float distancia = Vector3.Distance(transform.position, player.position);
         Vector3 direccion = (player.position - transform.position).normalized;
 
+        // Animaci√≥n de caminar (seg√∫n velocidad del agente)
+        anim.SetFloat("speed", agent.velocity.magnitude);
+
         if (distancia < 15f)
-        { // Rango de visiÛn
+        {
             if (Physics.Raycast(transform.position, direccion, out RaycastHit hit, 15f))
             {
                 if (hit.collider.CompareTag("Player"))
                 {
-                    Debug.Log("°Jugador detectado!");
-                    // AquÌ activaremos el movimiento
+                    Debug.Log("¬°Jugador detectado!");
+                    PerseguirJugador();
+
+                    // Si est√° muy cerca ‚Üí atacar
+                    if (distancia < 2.5f)
+                    {
+                        Atacar();
+                    }
                 }
             }
         }
-        PerseguirJugador();
     }
-
 
     void PerseguirJugador()
     {
-        // El agente calcula autom·ticamente la ruta m·s corta
         agent.SetDestination(player.position);
     }
 
+    void Atacar()
+    {
+        // Para que no siga corriendo mientras ataca
+        agent.SetDestination(transform.position);
 
+        // Dispara la animaci√≥n de ataque
+        anim.SetTrigger("attack");
+    }
 }
