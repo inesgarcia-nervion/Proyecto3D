@@ -6,6 +6,8 @@ public class PlayerHealth : MonoBehaviour
     private int vidasActuales;
     private PlayerHealthUI healthUI;
 
+    public bool estaMuerto = false;
+
     void Awake()
     {
         vidasActuales = maxVidas;
@@ -17,6 +19,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void RecibirDaño(float daño)
     {
+        if (estaMuerto) return;
+
         vidasActuales -= (int)daño;
 
         if (healthUI != null)
@@ -28,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Morir()
     {
-        Debug.Log("Player muerto.");
+        estaMuerto = true;
         GetComponent<PlayerController>().enabled = false;
         Invoke("CargarMenu", 2f);
     }

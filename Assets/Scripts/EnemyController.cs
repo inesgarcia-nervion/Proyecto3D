@@ -90,8 +90,13 @@ public class EnemyController : MonoBehaviour
             agent.isStopped = true;
             anim.SetFloat("speed", 0f);
 
-            if (canAttack && !isAttacking)
-                StartAttack();
+            PlayerHealth ph = player.GetComponent<PlayerHealth>();
+            if (ph != null && !ph.estaMuerto)
+            {
+                if (canAttack && !isAttacking)
+                    StartAttack();
+            }
+
         }
     }
 
@@ -154,11 +159,11 @@ public class EnemyController : MonoBehaviour
             Debug.Log("Jugador detectado dentro del ataque");
 
             PlayerHealth ph = c.GetComponent<PlayerHealth>();
-            if (ph != null)
+            if (ph != null && !ph.estaMuerto)
             {
-                Debug.Log("RecibirDaño() ejecutado correctamente");
                 ph.RecibirDaño(attackDamage);
             }
+
         }
 
 
