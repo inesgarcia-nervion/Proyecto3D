@@ -10,37 +10,27 @@ public class PlayerHealth : MonoBehaviour
     {
         vidasActuales = maxVidas;
         healthUI = FindObjectOfType<PlayerHealthUI>();
-    }
-
-    public void RecibirDaño(float vidas)
-    {
-        vidasActuales -= (int)vidas;
-
-        Debug.Log($"Player recibió {vidas} vida(s). Vidas restantes: {vidasActuales}");
 
         if (healthUI != null)
-        {
-            healthUI.PerderVida();
-        }
-
-        if (vidasActuales <= 0)
-        {
-            Morir();
-        }
+            healthUI.ActualizarVidas(vidasActuales);
     }
 
-    private void Morir()
+    public void RecibirDaño(float daño)
+    {
+        vidasActuales -= (int)daño;
+
+        if (healthUI != null)
+            healthUI.ActualizarVidas(vidasActuales);
+
+        if (vidasActuales <= 0)
+            Morir();
+    }
+
+    void Morir()
     {
         Debug.Log("Player muerto.");
-
-        var controller = GetComponent<PlayerController>();
-        if (controller != null)
-        {
-            controller.enabled = false;
-        }
-
-        // Opcional: Esperar un momento antes de cargar el menú
-        Invoke("CargarMenu", 2f); // Espera 2 segundos
+        GetComponent<PlayerController>().enabled = false;
+        Invoke("CargarMenu", 2f);
     }
 
     void CargarMenu()

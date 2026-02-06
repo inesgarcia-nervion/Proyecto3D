@@ -16727,7 +16727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1357216421320936970, guid: 3d2e6e9a35aebe848bcaf85c3ec6c0f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 34.2696
+      value: 34.368
       objectReference: {fileID: 0}
     - target: {fileID: 1357216421320936970, guid: 3d2e6e9a35aebe848bcaf85c3ec6c0f1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16869,8 +16869,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   player: {fileID: 1774448424}
   agent: {fileID: 1503605754}
-  showDebugRays: 1
-  showOnScreenDebug: 0
   detectionRange: 15
   attackRange: 2.5
   attackCooldown: 1.2
@@ -16878,9 +16876,9 @@ MonoBehaviour:
   attackHitRadius: 1
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
-  stoppingDistanceOffset: 0.3
-  minForcedAnimSpeed: 0.4
+    m_Bits: 64
+  patrolRadius: 10
+  patrolPointDuration: 4
 --- !u!195 &1503605754
 NavMeshAgent:
   m_ObjectHideFlags: 0
