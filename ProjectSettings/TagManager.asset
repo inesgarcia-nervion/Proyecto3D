@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Coin
+  - PausePanel
   layers:
   - Default
   - TransparentFX
