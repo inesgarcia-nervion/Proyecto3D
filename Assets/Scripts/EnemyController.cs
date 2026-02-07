@@ -156,15 +156,14 @@ public class EnemyController : MonoBehaviour
 
         foreach (var c in hits)
         {
-            Debug.Log("Jugador detectado dentro del ataque");
-
             PlayerHealth ph = c.GetComponent<PlayerHealth>();
             if (ph != null && !ph.estaMuerto)
             {
                 ph.RecibirDaño(attackDamage);
+                break; // ← evita daño doble
             }
-
         }
+
 
 
         // Esperar cooldown
