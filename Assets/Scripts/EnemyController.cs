@@ -27,6 +27,7 @@ public class EnemyController : MonoBehaviour
 
     bool canAttack = true;
     bool isAttacking = false;
+    bool victoryAnimationTriggered = false;
 
     void Start()
     {
@@ -50,30 +51,44 @@ public class EnemyController : MonoBehaviour
 
         float dist = Vector3.Distance(transform.position, player.position);
 
-        // ============================
-        // 1. PATRULLA
-        // ============================
+        PlayerHealth ph = player.GetComponent<PlayerHealth>();
+
+        // Si el jugador está muerto → animación final
+        if (ph != null && ph.estaMuerto)
+        {
+            if (!victoryAnimationTriggered)
+            {
+                agent.isStopped = true;
+                agent.velocity = Vector3.zero;
+                anim.SetFloat("speed", 0f);
+                anim.SetBool("isAttacking", false);
+                anim.SetBool("capoeira", true);
+
+                victoryAnimationTriggered = true;
+                enabled = false; // Desactivar el script
+            }
+            return;
+        }
+        // Para que el enemigo patrulle cuando el jugador no esté cerca
         if (dist > detectionRange)
         {
             Patrol();
             return;
         }
 
-        // ============================
-        // 2. PERSEGUIR
-        // ============================
+        // Para que el enemigo persiga al jugador cuando esté dentro del rango de detección pero fuera del rango de ataque
         agent.isStopped = false;
         agent.SetDestination(player.position);
 
         if (dist > attackRange)
         {
-            // CAMINAR
+            // Caminar
             if (dist > detectionRange * 0.6f)
             {
                 agent.speed = 1.6f;
                 anim.SetFloat("speed", 0.5f);
             }
-            // CORRER
+            // Correr
             else
             {
                 agent.speed = 3.5f;
@@ -84,25 +99,16 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            // ============================
-            // 3. ATAQUE
-            // ============================
+            // Ataque al jugador
             agent.isStopped = true;
             anim.SetFloat("speed", 0f);
 
-            PlayerHealth ph = player.GetComponent<PlayerHealth>();
-            if (ph != null && !ph.estaMuerto)
-            {
-                if (canAttack && !isAttacking)
-                    StartAttack();
-            }
-
+            if (canAttack && !isAttacking)
+                StartAttack();
         }
     }
 
-    // ============================
-    // SISTEMA DE PATRULLA
-    // ============================
+    // Sistema de patrulla
     void Patrol()
     {
         agent.speed = 1.6f;
@@ -129,9 +135,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    // ============================
-    // ATAQUE SIN TRIGGER
-    // ============================
+    // Ataque al jugador
     void StartAttack()
     {
         isAttacking = true;
@@ -144,13 +148,10 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator AttackRoutine()
     {
-
         // Esperar al frame del impacto
         yield return new WaitForSeconds(0.35f);
 
         Vector3 center = transform.position + transform.forward * 0.6f + Vector3.up * -0.5f;
-
-        Debug.Log("OverlapSphere lanzado en: " + center);
 
         Collider[] hits = Physics.OverlapSphere(center, 1.8f, playerLayer);
 
@@ -160,11 +161,9 @@ public class EnemyController : MonoBehaviour
             if (ph != null && !ph.estaMuerto)
             {
                 ph.RecibirDaño(attackDamage);
-                break; // ← evita daño doble
+                break; // Evita daño doble
             }
         }
-
-
 
         // Esperar cooldown
         yield return new WaitForSeconds(attackCooldown);
@@ -185,6 +184,4 @@ public class EnemyController : MonoBehaviour
         Vector3 center = transform.position + transform.forward * 0.6f + Vector3.up * -0.5f;
         Gizmos.DrawWireSphere(center, 1.8f);
     }
-
-
 }

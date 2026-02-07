@@ -17633,6 +17633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   maxVidas: 5
+  estaMuerto: 0
 --- !u!1 &1778546547 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5428513508548990392, guid: 680522ccbc8dc7149bd35ea6a4971782, type: 3}
