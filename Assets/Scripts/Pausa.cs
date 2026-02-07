@@ -8,95 +8,48 @@ using UnityEngine.InputSystem;
 public class Pausa : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField]
-    private GameObject panelPausa;
+    [SerializeField] private GameObject panelPausa; // Panel de pausa asignado en el Inspector
 
-    // Intent: toggle pause when player presses Escape (or the Cancel input)
     void Awake()
     {
-        // If the panel was not assigned in the Inspector, try to find it by common names or tag to avoid silent failures.
+        // Si no está asignado, intenta encontrar por el nombre común
         if (panelPausa == null)
-        {
-            // Try a few common names (adjust to match your scene hierarchy)
-            panelPausa = GameObject.Find("PanelPausa") ?? GameObject.Find("Panel Pausa") ?? GameObject.Find("PausePanel");
+            panelPausa = GameObject.Find("PanelPausa");
 
-            // Try finding by a tag if you set one in the inspector (optional)
-            if (panelPausa == null)
-            {
-                var byTag = GameObject.FindWithTag("PausePanel");
-                if (byTag != null) panelPausa = byTag;
-            }
-
-            if (panelPausa == null)
-            {
-                Debug.LogWarning("Pausa: 'panelPausa' no está asignado y no se encontró ningún objeto con nombres comunes. Asigne el panel en el Inspector.");
-            }
-        }
-
-        // Ensure the panel is hidden at start
+        // Ocultar panel al iniciar
         if (panelPausa != null)
-        {
             panelPausa.SetActive(false);
-        }
 
-        // Ensure the game is running at normal time on start
-        Time.timeScale = 1f;
+        Time.timeScale = 1f; // Asegurar tiempo normal
     }
 
-    // Cuando el jugador presiona la tecla de esc, se activa o desactiva el estado de pausa del juego.
     void Update()
     {
+        // Detectar Escape para alternar pausa
 #if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
-        // Use the new Input System if it's enabled and the legacy input manager is disabled
-        var keyboard = Keyboard.current;
-        if (keyboard != null && keyboard.escapeKey.wasPressedThisFrame)
-        {
+        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
             TogglePause();
-        }
-
-        // Optionally support a "Cancel" style button on gamepad (adjust as needed)
-        var gamepad = Gamepad.current;
-        if (gamepad != null && (gamepad.startButton.wasPressedThisFrame || gamepad.buttonSouth.wasPressedThisFrame))
-        {
-            TogglePause();
-        }
-#else
-        // Legacy input manager
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Cancel"))
-        {
-            TogglePause();
-        }
 #endif
+
+        // Input Manager clásico: Escape
+        if (Input.GetKeyDown(KeyCode.Escape))
+            TogglePause();
     }
 
-    // Toggle pause state and panel
+    // Alterna pausa y visibilidad del panel
     public void TogglePause()
     {
-        if (panelPausa == null)
-        {
-            Debug.LogWarning("Pausa: No se puede cambiar el estado de pausa porque 'panelPausa' es null.");
-            return;
-        }
+        if (panelPausa == null) return;
 
         bool isPaused = Time.timeScale == 0f;
-
-        if (!isPaused)
-        {
-            panelPausa.SetActive(true);
-            Time.timeScale = 0f; // Pausa el juego
-        }
-        else
-        {
-            panelPausa.SetActive(false);
-            Time.timeScale = 1f; // Reanuda el juego
-        }
+        panelPausa.SetActive(!isPaused);
+        Time.timeScale = isPaused ? 1f : 0f;
     }
 
+    // Volver al menú principal
     public void VolverAlMenu()
     {
         Time.timeScale = 1f;
-
         SceneManager.LoadScene("MenuPrincipal");
     }
-
 }
