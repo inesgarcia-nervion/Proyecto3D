@@ -24,7 +24,9 @@ public class PlayerController : MonoBehaviour
         // Si está muerto, no se mueve
         PlayerHealth health = GetComponent<PlayerHealth>();
         if (health != null && health.estaMuerto)
+        {
             return;
+        }
 
         // Resetear gravedad
         if (controller.isGrounded && velocity.y < 0)
@@ -59,7 +61,9 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("speed", currentSpeed);
 
         // Correr
-        speed = Keyboard.current.leftShiftKey.isPressed ? 20f : 12f;
+        bool running = Keyboard.current.leftShiftKey.isPressed; 
+        animator.SetBool("isRunning", running); 
+        speed = running ? 20f : 12f;
 
         // SALTO (el bueno)
         if (Keyboard.current.spaceKey.wasPressedThisFrame && controller.isGrounded)

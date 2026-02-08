@@ -18841,7 +18841,7 @@ MonoBehaviour:
   controller: {fileID: 2039111663}
   speed: 12
   gravity: -9.81
-  jumpHeight: 2
+  jumpHeight: 3
 --- !u!136 &2039111665
 CapsuleCollider:
   m_ObjectHideFlags: 0

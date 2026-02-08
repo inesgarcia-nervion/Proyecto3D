@@ -33,9 +33,17 @@ public class PlayerHealth : MonoBehaviour
     void Morir()
     {
         estaMuerto = true;
+
+        // Activar animación de muerte
+        Animator anim = GetComponentInChildren<Animator>();
+        anim.SetBool("estaMuerto", true);
+
+        // Ahora sí puedes desactivar el controller
         GetComponent<PlayerController>().enabled = false;
+
         Invoke("CargarMenu", 2f);
     }
+
 
     void CargarMenu()
     {
