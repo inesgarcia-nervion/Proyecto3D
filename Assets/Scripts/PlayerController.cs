@@ -1,4 +1,4 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -6,22 +6,39 @@ public class PlayerController : MonoBehaviour
     public CharacterController controller;
     public float speed = 12f;
     public float gravity = -9.81f;
+    public float jumpHeight = 2f;
+
     private Vector2 moveInput;
     private Vector3 velocity;
-    private float jumpHeight;
-    public float damage = 10f;
+
+    private Animator animator;
+    private bool isJumping = false;
+
+    void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
 
     void Update()
     {
-        // 1. Resetear gravedad SI toca el suelo (IMPORTANTE: Hacerlo al principio)
+        // Si est√° muerto, no se mueve
+        PlayerHealth health = GetComponent<PlayerHealth>();
+        if (health != null && health.estaMuerto)
+            return;
 
+        // Resetear gravedad
         if (controller.isGrounded && velocity.y < 0)
         {
             velocity.y = -1f;
-        }
-        // 2. Lectura del Nuevo Input System (Teclado/WASD) y salto
-        // Keyboard.current detecta el teclado activo
 
+            if (isJumping)
+            {
+                isJumping = false;
+                animator.SetBool("isJumping", false);
+            }
+        }
+
+        // Movimiento WASD
         if (Keyboard.current != null)
         {
             float x = 0;
@@ -31,42 +48,35 @@ public class PlayerController : MonoBehaviour
             if (Keyboard.current.sKey.isPressed) z = -1;
             if (Keyboard.current.aKey.isPressed) x = -1;
             if (Keyboard.current.dKey.isPressed) x = 1;
-            /* AquÌ va el cÛdigo de correr */
+
             moveInput = new Vector2(x, z);
-            /* AquÌ va el cÛdigo del salto */
         }
 
-        // 3. C·lculo de direcciÛn
-        // Calculamos la direcciÛn horizontal (WASD)
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
 
-        // Aplicamos la gravedad al valor actual de velocity.y
+        // Animaci√≥n de caminar/correr
+        float currentSpeed = new Vector2(moveInput.x, moveInput.y).magnitude;
+        animator.SetFloat("speed", currentSpeed);
+
+        // Correr
+        speed = Keyboard.current.leftShiftKey.isPressed ? 20f : 12f;
+
+        // SALTO (el bueno)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && controller.isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            isJumping = true;
+            animator.SetBool("isJumping", true);
+        }
+
+        // Gravedad
         velocity.y += gravity * Time.deltaTime;
 
-        // COMBINAMOS TODO: (Movimiento Horizontal * Velocidad) + DirecciÛn Vertical
+        // Movimiento final
         Vector3 finalMovement = (move * speed) + (Vector3.up * velocity.y);
         controller.Move(finalMovement * Time.deltaTime);
 
-        // 4. Saltar y correr
-        // Para correr
-        if (Keyboard.current.leftShiftKey.isPressed)
-            speed = 20f;
-        else
-            speed = 12f;
-
-        // Salto continuo
-        if (Keyboard.current.spaceKey.isPressed && controller.isGrounded)
-            velocity.y = 5f;
-
-        // Un solo salto
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && controller.isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);    // jumpHeight = n∫ metros
-        }
-
         // Agacharse
-        transform.localScale = new Vector3(1f, (Keyboard.current.qKey.isPressed) ? 0.5f : 1f, 1f);
-
-
+        transform.localScale = new Vector3(1f, Keyboard.current.qKey.isPressed ? 0.5f : 1f, 1f);
     }
 }
