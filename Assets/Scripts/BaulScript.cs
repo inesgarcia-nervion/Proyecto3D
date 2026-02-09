@@ -28,7 +28,6 @@ public class BaulScript : MonoBehaviour
     {
         if (juegoTerminado)
         {
-            Debug.Log("El juego ya terminó");
             return;
         }
 
@@ -39,14 +38,12 @@ public class BaulScript : MonoBehaviour
     {
         if (CoinManager.Instance == null)
         {
-            Debug.LogError("CoinManager.Instance es null!");
             return;
         }
 
         // Verificar si el jugador tiene monedas
         if (CoinManager.Instance.coinsCollected <= 0)
         {
-            Debug.Log("No tienes monedas para guardar. Monedas actuales: " + CoinManager.Instance.coinsCollected);
             return;
         }
 
@@ -58,7 +55,6 @@ public class BaulScript : MonoBehaviour
         CoinManager.Instance.UpdateHUD();
         UpdateHUD();
 
-        Debug.Log("¡Moneda guardada! Baúl: " + monedasGuardadas + "/" + monedasParaGanar + " | Jugador: " + CoinManager.Instance.coinsCollected);
 
         // Comprobar victoria
         if (monedasGuardadas >= monedasParaGanar)
@@ -71,13 +67,10 @@ public class BaulScript : MonoBehaviour
     {
         if (baulText != null)
             baulText.text = "Monedas en el baúl: " + monedasGuardadas + "/" + monedasParaGanar;
-        else
-            Debug.LogWarning("baulText no está asignado en el Inspector!");
     }
 
     void Victoria()
     {
-        Debug.Log("¡VICTORIA!");
         juegoTerminado = true;
 
         // Desactivar controles del jugador

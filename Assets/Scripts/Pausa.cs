@@ -31,7 +31,6 @@ public class Pausa : MonoBehaviour
             TogglePause();
 #endif
 
-        // Input Manager clásico: Escape
         if (Input.GetKeyDown(KeyCode.Escape))
             TogglePause();
     }

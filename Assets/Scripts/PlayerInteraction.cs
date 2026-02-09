@@ -25,9 +25,6 @@ public class Inter : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, range, Layer))
         {
-            // Debug para ver qué estás mirando
-            Debug.Log("Mirando: " + hit.collider.gameObject.name + " | Tag: " + hit.collider.gameObject.tag);
-
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
                 Interactuar(hit.collider.gameObject);
@@ -37,7 +34,6 @@ public class Inter : MonoBehaviour
 
     void Interactuar(GameObject go)
     {
-        Debug.Log("Intentando interactuar con: " + go.name);
 
         // Interacción con monedas
         if (go.CompareTag("Coin"))
@@ -46,7 +42,6 @@ public class Inter : MonoBehaviour
             if (coin != null)
             {
                 coin.Collect();
-                Debug.Log("Moneda recogida!");
             }
         }
 
@@ -56,12 +51,7 @@ public class Inter : MonoBehaviour
             BaulScript baul = go.GetComponent<BaulScript>();
             if (baul != null)
             {
-                Debug.Log("Interactuando con el baúl...");
                 baul.Interactuar();
-            }
-            else
-            {
-                Debug.LogError("El baúl no tiene el script BaulScript!");
             }
         }
     }

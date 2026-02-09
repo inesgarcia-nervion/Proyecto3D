@@ -81,11 +81,7 @@ public class PlayerController : MonoBehaviour
             lastJumpPressTime = Time.time;
         }
 
-        // SALTO MEJORADO
-        // Comprueba si:
-        // 1. Se presionó salto recientemente (jump buffer)
-        // 2. Estuvimos en el suelo recientemente (coyote time)
-        // 3. No estamos ya saltando (evita doble salto)
+        // Para evitar problemas con el salto, verificamos si el salto está dentro del tiempo de buffer y coyote time
         bool jumpBufferActive = (Time.time - lastJumpPressTime) < jumpBufferTime;
         bool coyoteTimeActive = (Time.time - lastGroundedTime) < coyoteTime;
 
