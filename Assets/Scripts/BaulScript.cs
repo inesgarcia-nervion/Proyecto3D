@@ -1,68 +1,66 @@
 ﻿using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class BaulScript : MonoBehaviour
 {
     public int monedasGuardadas = 0;
-    public int monedasParaGanar = 15; // ← Cantidad necesaria para ganar
+    public int monedasParaGanar = 15;
     public TextMeshProUGUI baulText;
-    public float interactRange = 3f;
-    public Transform player;
 
     [Header("Victoria")]
-    public GameObject panelVictoria; // ← Panel de victoria (asignar en el Inspector)
-    public float tiempoAntesDeSalir = 3f; // Tiempo antes de volver al menú
+    public GameObject panelVictoria;
+    public float tiempoAntesDeSalir = 3f;
 
     private bool juegoTerminado = false;
-
-    Renderer rend;
-    Collider col;
-
-    void Awake()
-    {
-        rend = GetComponent<Renderer>();
-        col = GetComponent<Collider>();
-
-        // Asegurar que el panel de victoria esté oculto al inicio
-        if (panelVictoria != null)
-            panelVictoria.SetActive(false);
-    }
 
     void Start()
     {
         UpdateHUD();
+
+        if (panelVictoria != null)
+            panelVictoria.SetActive(false);
     }
 
-    void Update()
+    // Este método es llamado desde Inter.cs cuando presionas E
+    public void Interactuar()
     {
-        if (player == null || juegoTerminado) return;
-
-        // Comprobar si el jugador está cerca y pulsa E
-        if (Vector3.Distance(player.position, transform.position) <= interactRange)
+        if (juegoTerminado)
         {
-            if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
-            {
-                GuardarMonedas();
-            }
+            Debug.Log("El juego ya terminó");
+            return;
         }
+
+        GuardarMonedas();
     }
 
     void GuardarMonedas()
     {
-        if (CoinManager.Instance == null) return;
+        if (CoinManager.Instance == null)
+        {
+            Debug.LogError("CoinManager.Instance es null!");
+            return;
+        }
 
-        // Solo transferir si el jugador tiene al menos una moneda
-        if (CoinManager.Instance.coinsCollected <= 0) return;
+        // Verificar si el jugador tiene monedas
+        if (CoinManager.Instance.coinsCollected <= 0)
+        {
+            Debug.Log("No tienes monedas para guardar. Monedas actuales: " + CoinManager.Instance.coinsCollected);
+            return;
+        }
 
+        // Transferir una moneda del jugador al baúl
         monedasGuardadas += 1;
         CoinManager.Instance.coinsCollected -= 1;
+
+        // Actualizar ambos HUD
         CoinManager.Instance.UpdateHUD();
         UpdateHUD();
 
-        // ¡COMPROBAR VICTORIA!
+        Debug.Log("¡Moneda guardada! Baúl: " + monedasGuardadas + "/" + monedasParaGanar + " | Jugador: " + CoinManager.Instance.coinsCollected);
+
+        // Comprobar victoria
         if (monedasGuardadas >= monedasParaGanar)
         {
             Victoria();
@@ -73,16 +71,20 @@ public class BaulScript : MonoBehaviour
     {
         if (baulText != null)
             baulText.text = "Monedas en el baúl: " + monedasGuardadas + "/" + monedasParaGanar;
+        else
+            Debug.LogWarning("baulText no está asignado en el Inspector!");
     }
 
     void Victoria()
     {
+        Debug.Log("¡VICTORIA!");
         juegoTerminado = true;
 
         // Desactivar controles del jugador
-        if (player != null)
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
         {
-            PlayerController pc = player.GetComponent<PlayerController>();
+            PlayerController pc = playerObj.GetComponent<PlayerController>();
             if (pc != null) pc.enabled = false;
         }
 
@@ -92,22 +94,17 @@ public class BaulScript : MonoBehaviour
             panelVictoria.SetActive(true);
         }
 
-        // Detener el tiempo (opcional, para congelar el juego)
+        // Detener el tiempo
         Time.timeScale = 0f;
 
-        // Volver al menú después de unos segundos
+        // Volver al menú
         StartCoroutine(VolverAlMenuDespuesDeTiempo());
     }
 
     IEnumerator VolverAlMenuDespuesDeTiempo()
     {
-        // Esperar usando tiempo real (no afectado por timeScale)
         yield return new WaitForSecondsRealtime(tiempoAntesDeSalir);
-
-        // Restaurar el tiempo antes de cambiar de escena
         Time.timeScale = 1f;
-
-        // Cargar menú principal
         SceneManager.LoadScene("MenuPrincipal");
     }
 }
