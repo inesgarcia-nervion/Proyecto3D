@@ -21427,11 +21427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae06ee000d85df46a702ed10b5b66e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  target: {fileID: 2039111658}
-  offset: {x: 0, y: 1.5, z: 0}
-  lockY: 1
-  fixedHeight: 1
-  initialYOffset: 0
 --- !u!1 &658555335
 GameObject:
   m_ObjectHideFlags: 0
@@ -36000,7 +35995,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2039111659}
         m_TargetAssemblyTypeName: Pausa, Assembly-CSharp
         m_MethodName: VolverAlMenu
         m_Mode: 1
