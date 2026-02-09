@@ -10,9 +10,15 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 moveInput;
     private Vector3 velocity;
-
     private Animator animator;
     private bool isJumping = false;
+
+    // Variables para mejorar el salto
+    private float lastGroundedTime = 0f;
+    private float lastJumpPressTime = -1f;
+    private float coyoteTime = 0.15f;  // Tiempo después de salir del suelo donde puedes saltar
+    private float jumpBufferTime = 0.2f;  // Tiempo que recuerda que presionaste salto
+    private bool canDoubleJump = false;  // Para evitar saltos múltiples accidentales
 
     void Start()
     {
@@ -28,11 +34,17 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+        // Guardar el tiempo que estuvimos en el suelo
+        if (controller.isGrounded)
+        {
+            lastGroundedTime = Time.time;
+            canDoubleJump = false;
+        }
+
         // Resetear gravedad
         if (controller.isGrounded && velocity.y < 0)
         {
-            velocity.y = -1f;
-
+            velocity.y = -2f;
             if (isJumping)
             {
                 isJumping = false;
@@ -45,12 +57,10 @@ public class PlayerController : MonoBehaviour
         {
             float x = 0;
             float z = 0;
-
             if (Keyboard.current.wKey.isPressed) z = 1;
             if (Keyboard.current.sKey.isPressed) z = -1;
             if (Keyboard.current.aKey.isPressed) x = -1;
             if (Keyboard.current.dKey.isPressed) x = 1;
-
             moveInput = new Vector2(x, z);
         }
 
@@ -61,16 +71,31 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("speed", currentSpeed);
 
         // Correr
-        bool running = Keyboard.current.leftShiftKey.isPressed; 
-        animator.SetBool("isRunning", running); 
+        bool running = Keyboard.current.leftShiftKey.isPressed;
+        animator.SetBool("isRunning", running);
         speed = running ? 20f : 12f;
 
-        // SALTO (el bueno)
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && controller.isGrounded)
+        // Registrar cuando se presiona el salto
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            lastJumpPressTime = Time.time;
+        }
+
+        // SALTO MEJORADO
+        // Comprueba si:
+        // 1. Se presionó salto recientemente (jump buffer)
+        // 2. Estuvimos en el suelo recientemente (coyote time)
+        // 3. No estamos ya saltando (evita doble salto)
+        bool jumpBufferActive = (Time.time - lastJumpPressTime) < jumpBufferTime;
+        bool coyoteTimeActive = (Time.time - lastGroundedTime) < coyoteTime;
+
+        if (jumpBufferActive && coyoteTimeActive && !canDoubleJump)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             isJumping = true;
             animator.SetBool("isJumping", true);
+            canDoubleJump = true;  // Previene saltos múltiples
+            lastJumpPressTime = -1f;  // Resetear para no saltar de nuevo
         }
 
         // Gravedad
