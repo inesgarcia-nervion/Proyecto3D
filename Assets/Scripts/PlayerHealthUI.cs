@@ -7,6 +7,6 @@ public class PlayerHealthUI : MonoBehaviour
 
     public void ActualizarVidas(int vidas)
     {
-        vidasText.text = "Vidas restantes: " + vidas;
+        vidasText.text = "Vidas: " + vidas;
     }
 }

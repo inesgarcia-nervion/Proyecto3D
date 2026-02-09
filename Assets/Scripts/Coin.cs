@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Coin : MonoBehaviour
 {
-    public float respawnTime = 5f;       // Tiempo para reaparecer
+    // Todo acerca del tiempo de respawn se ha comentado ya que no creo que lo utilice en el proyecto final, pero lo dejo por si acaso
+    // public float respawnTime = 5f;       // Tiempo para reaparecer
     private Vector3 initialPosition;
     private Renderer rend;
     private Collider col;
@@ -11,13 +12,13 @@ public class Coin : MonoBehaviour
 
     void Start()
     {
-        initialPosition = transform.position;
+        // initialPosition = transform.position;  // Guardaba posición inicial para respawn
         rend = GetComponent<Renderer>();
         col = GetComponent<Collider>();
-
         if (rend != null) rend.enabled = true;
         if (col != null) col.enabled = true;
     }
+
     void Update()
     {
         // Rotar la moneda para un efecto visual
@@ -33,10 +34,12 @@ public class Coin : MonoBehaviour
         // Sumar al contador
         CoinManager.Instance.AddCoin();
 
-        // Iniciar respawn
-        StartCoroutine(Respawn());
+        // --- RESPAWN (comentado) ---
+        // StartCoroutine(Respawn());
     }
 
+    // --- CORRUTINA DE RESPAWN (comentada) ---
+    /*
     IEnumerator Respawn()
     {
         yield return new WaitForSeconds(respawnTime);
@@ -44,5 +47,5 @@ public class Coin : MonoBehaviour
         if (rend != null) rend.enabled = true;
         if (col != null) col.enabled = true;
     }
+    */
 }
-
