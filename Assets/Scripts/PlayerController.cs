@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
         // Correr
         bool running = Keyboard.current.leftShiftKey.isPressed;
         animator.SetBool("isRunning", running);
-        speed = running ? 20f : 12f;
+        speed = running ? 7f : 4f;
 
         // Registrar cuando se presiona el salto
         if (Keyboard.current.spaceKey.wasPressedThisFrame)

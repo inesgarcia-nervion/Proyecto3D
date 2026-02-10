@@ -893,7 +893,7 @@ GameObject:
   - component: {fileID: 68555198}
   - component: {fileID: 68555197}
   - component: {fileID: 68555196}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -970,7 +970,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1823,11 +1823,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319254109248486168, guid: 6aa32cf275f2ad14a8bd2653c4e1188c, type: 3}
       propertyPath: m_Speed
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8597616445596889685, guid: 6aa32cf275f2ad14a8bd2653c4e1188c, type: 3}
       propertyPath: detectionRange
-      value: 17
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2341,7 +2341,7 @@ GameObject:
   - component: {fileID: 168764672}
   - component: {fileID: 168764671}
   - component: {fileID: 168764670}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,7 +2418,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3409,7 +3409,7 @@ GameObject:
   - component: {fileID: 254757848}
   - component: {fileID: 254757847}
   - component: {fileID: 254757846}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3486,7 +3486,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3827,7 +3827,7 @@ GameObject:
   - component: {fileID: 276017238}
   - component: {fileID: 276017237}
   - component: {fileID: 276017236}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3904,7 +3904,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5073,7 +5073,7 @@ GameObject:
   - component: {fileID: 347077943}
   - component: {fileID: 347077942}
   - component: {fileID: 347077941}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5150,7 +5150,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7490,7 +7490,7 @@ GameObject:
   - component: {fileID: 535090601}
   - component: {fileID: 535090600}
   - component: {fileID: 535090599}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7567,7 +7567,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19439,7 +19439,7 @@ GameObject:
   - component: {fileID: 575324393}
   - component: {fileID: 575324392}
   - component: {fileID: 575324391}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19516,7 +19516,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19795,7 +19795,7 @@ GameObject:
   - component: {fileID: 585250327}
   - component: {fileID: 585250326}
   - component: {fileID: 585250325}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19872,7 +19872,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20151,7 +20151,7 @@ GameObject:
   - component: {fileID: 598918157}
   - component: {fileID: 598918156}
   - component: {fileID: 598918155}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20228,7 +20228,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20685,7 +20685,7 @@ GameObject:
   - component: {fileID: 612054907}
   - component: {fileID: 612054906}
   - component: {fileID: 612054905}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20762,7 +20762,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21520,7 +21520,7 @@ GameObject:
   - component: {fileID: 678246487}
   - component: {fileID: 678246486}
   - component: {fileID: 678246485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21597,7 +21597,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22054,7 +22054,7 @@ GameObject:
   - component: {fileID: 683192488}
   - component: {fileID: 683192487}
   - component: {fileID: 683192486}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22131,7 +22131,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22650,7 +22650,7 @@ GameObject:
   - component: {fileID: 697978317}
   - component: {fileID: 697978316}
   - component: {fileID: 697978315}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22727,7 +22727,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23664,7 +23664,7 @@ GameObject:
   - component: {fileID: 718334632}
   - component: {fileID: 718334631}
   - component: {fileID: 718334630}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23741,7 +23741,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24198,7 +24198,7 @@ GameObject:
   - component: {fileID: 734516672}
   - component: {fileID: 734516671}
   - component: {fileID: 734516670}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24275,7 +24275,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24732,7 +24732,7 @@ GameObject:
   - component: {fileID: 743401415}
   - component: {fileID: 743401414}
   - component: {fileID: 743401413}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24809,7 +24809,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25265,11 +25265,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319254109248486168, guid: 6aa32cf275f2ad14a8bd2653c4e1188c, type: 3}
       propertyPath: m_Speed
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8597616445596889685, guid: 6aa32cf275f2ad14a8bd2653c4e1188c, type: 3}
       propertyPath: detectionRange
-      value: 17
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25330,11 +25330,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319254109248486168, guid: 6aa32cf275f2ad14a8bd2653c4e1188c, type: 3}
       propertyPath: m_Speed
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8597616445596889685, guid: 6aa32cf275f2ad14a8bd2653c4e1188c, type: 3}
       propertyPath: detectionRange
-      value: 17
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25355,7 +25355,7 @@ GameObject:
   - component: {fileID: 762682032}
   - component: {fileID: 762682031}
   - component: {fileID: 762682030}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25432,7 +25432,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27081,7 +27081,7 @@ GameObject:
   - component: {fileID: 866208605}
   - component: {fileID: 866208604}
   - component: {fileID: 866208603}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27158,7 +27158,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27793,7 +27793,7 @@ GameObject:
   - component: {fileID: 881722076}
   - component: {fileID: 881722075}
   - component: {fileID: 881722074}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27870,7 +27870,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28149,7 +28149,7 @@ GameObject:
   - component: {fileID: 882919537}
   - component: {fileID: 882919536}
   - component: {fileID: 882919535}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28226,7 +28226,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28861,7 +28861,7 @@ GameObject:
   - component: {fileID: 898855238}
   - component: {fileID: 898855237}
   - component: {fileID: 898855236}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28938,7 +28938,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29217,7 +29217,7 @@ GameObject:
   - component: {fileID: 906347155}
   - component: {fileID: 906347154}
   - component: {fileID: 906347153}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29294,7 +29294,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29573,7 +29573,7 @@ GameObject:
   - component: {fileID: 932978528}
   - component: {fileID: 932978527}
   - component: {fileID: 932978526}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29650,7 +29650,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29929,7 +29929,7 @@ GameObject:
   - component: {fileID: 944456580}
   - component: {fileID: 944456579}
   - component: {fileID: 944456578}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30006,7 +30006,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30285,7 +30285,7 @@ GameObject:
   - component: {fileID: 970004442}
   - component: {fileID: 970004441}
   - component: {fileID: 970004440}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30362,7 +30362,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32266,7 +32266,7 @@ GameObject:
   - component: {fileID: 1137588217}
   - component: {fileID: 1137588216}
   - component: {fileID: 1137588215}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32343,7 +32343,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33184,7 +33184,7 @@ GameObject:
   - component: {fileID: 1205341143}
   - component: {fileID: 1205341142}
   - component: {fileID: 1205341141}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33261,7 +33261,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33540,7 +33540,7 @@ GameObject:
   - component: {fileID: 1238000739}
   - component: {fileID: 1238000738}
   - component: {fileID: 1238000737}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33617,7 +33617,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34033,7 +34033,7 @@ GameObject:
   - component: {fileID: 1311915478}
   - component: {fileID: 1311915477}
   - component: {fileID: 1311915476}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34110,7 +34110,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34812,7 +34812,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 42f8049b0aa7e56428eacc14875ba421, type: 2}
+  - {fileID: 2100000, guid: ee357ce287f20ad40811f810fa652e4e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34858,7 +34858,7 @@ GameObject:
   - component: {fileID: 1365038113}
   - component: {fileID: 1365038112}
   - component: {fileID: 1365038111}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34935,7 +34935,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35214,7 +35214,7 @@ GameObject:
   - component: {fileID: 1366689912}
   - component: {fileID: 1366689911}
   - component: {fileID: 1366689910}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35291,7 +35291,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35570,7 +35570,7 @@ GameObject:
   - component: {fileID: 1391561367}
   - component: {fileID: 1391561366}
   - component: {fileID: 1391561365}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35647,7 +35647,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36524,7 +36524,7 @@ GameObject:
   - component: {fileID: 1468625467}
   - component: {fileID: 1468625466}
   - component: {fileID: 1468625465}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36601,7 +36601,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36942,7 +36942,7 @@ GameObject:
   - component: {fileID: 1477023239}
   - component: {fileID: 1477023238}
   - component: {fileID: 1477023237}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37019,7 +37019,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37356,8 +37356,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1502989877}
   - component: {fileID: 1502989876}
-  - component: {fileID: 1502989882}
+  - component: {fileID: 1502989884}
   - component: {fileID: 1502989879}
+  - component: {fileID: 1502989883}
   - component: {fileID: 1502989881}
   m_Layer: 0
   m_Name: CinemachineCamera
@@ -37418,7 +37419,7 @@ Transform:
   m_GameObject: {fileID: 1502989875}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 99.08189, y: 37.12312, z: 560.0989}
+  m_LocalPosition: {x: 99.08189, y: 36.72453, z: 558.19147}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37476,7 +37477,7 @@ MonoBehaviour:
   m_ControllerManager:
     Controllers:
     - Name: Look Orbit X
-      Owner: {fileID: 1502989882}
+      Owner: {fileID: 1502989884}
       Enabled: 1
       Input:
         InputAction: {fileID: -5630151704836100654, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
@@ -37487,7 +37488,7 @@ MonoBehaviour:
         AccelTime: 0.2
         DecelTime: 0.2
     - Name: Look Orbit Y
-      Owner: {fileID: 1502989882}
+      Owner: {fileID: 1502989884}
       Enabled: 1
       Input:
         InputAction: {fileID: -5630151704836100654, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
@@ -37498,7 +37499,7 @@ MonoBehaviour:
         AccelTime: 0.2
         DecelTime: 0.2
     - Name: Orbit Scale
-      Owner: {fileID: 1502989882}
+      Owner: {fileID: 1502989884}
       Enabled: 1
       Input:
         InputAction: {fileID: 5082991133974614888, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
@@ -37532,7 +37533,37 @@ MonoBehaviour:
         DecelTime: 0.2
   PlayerIndex: -1
   AutoEnableInputs: 1
---- !u!114 &1502989882
+--- !u!114 &1502989883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502989875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7de3aefa901374ba29464584a3109a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineDecollider
+  CameraRadius: 0.4
+  Decollision:
+    Enabled: 1
+    ObstacleLayers:
+      serializedVersion: 2
+      m_Bits: 128
+    UseFollowTarget:
+      Enabled: 0
+      YOffset: 0
+    Damping: 0.5
+    SmoothingTime: 0
+  TerrainResolution:
+    Enabled: 1
+    TerrainLayers:
+      serializedVersion: 2
+      m_Bits: 1
+    MaximumRaycast: 10
+    Damping: 0.5
+--- !u!114 &1502989884
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37544,7 +37575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b5d7c088409d9a40b7b09aa707777f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineOrbitalFollow
-  TargetOffset: {x: 0, y: 1, z: 0}
+  TargetOffset: {x: 0, y: 0, z: 0}
   TrackerSettings:
     BindingMode: 4
     PositionDamping: {x: 1, y: 1, z: 1}
@@ -37552,7 +37583,7 @@ MonoBehaviour:
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
   OrbitStyle: 0
-  Radius: 3
+  Radius: 5
   Orbits:
     Top:
       Radius: 2
@@ -37939,7 +37970,7 @@ GameObject:
   - component: {fileID: 1545432068}
   - component: {fileID: 1545432067}
   - component: {fileID: 1545432066}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38016,7 +38047,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -38295,7 +38326,7 @@ GameObject:
   - component: {fileID: 1586151819}
   - component: {fileID: 1586151818}
   - component: {fileID: 1586151817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38372,7 +38403,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -38829,7 +38860,7 @@ GameObject:
   - component: {fileID: 1596476454}
   - component: {fileID: 1596476453}
   - component: {fileID: 1596476452}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38906,7 +38937,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39541,7 +39572,7 @@ GameObject:
   - component: {fileID: 1651861288}
   - component: {fileID: 1651861287}
   - component: {fileID: 1651861286}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39618,7 +39649,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -40650,7 +40681,7 @@ GameObject:
   - component: {fileID: 1808853141}
   - component: {fileID: 1808853140}
   - component: {fileID: 1808853139}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40727,7 +40758,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -41184,7 +41215,7 @@ GameObject:
   - component: {fileID: 1831264621}
   - component: {fileID: 1831264620}
   - component: {fileID: 1831264619}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41261,7 +41292,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -41975,7 +42006,7 @@ Transform:
   m_GameObject: {fileID: 1864879439}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 99.08189, y: 37.12312, z: 560.0989}
+  m_LocalPosition: {x: 99.08189, y: 36.72453, z: 558.19147}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42311,7 +42342,7 @@ GameObject:
   - component: {fileID: 1979495588}
   - component: {fileID: 1979495587}
   - component: {fileID: 1979495586}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42388,7 +42419,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -42667,7 +42698,7 @@ GameObject:
   - component: {fileID: 1987998273}
   - component: {fileID: 1987998272}
   - component: {fileID: 1987998271}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42744,7 +42775,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -43085,7 +43116,7 @@ GameObject:
   - component: {fileID: 2013571555}
   - component: {fileID: 2013571554}
   - component: {fileID: 2013571553}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43162,7 +43193,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -43441,7 +43472,7 @@ GameObject:
   - component: {fileID: 2024157845}
   - component: {fileID: 2024157844}
   - component: {fileID: 2024157843}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43518,7 +43549,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -43797,7 +43828,7 @@ GameObject:
   - component: {fileID: 2031855500}
   - component: {fileID: 2031855499}
   - component: {fileID: 2031855498}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43874,7 +43905,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -44153,7 +44184,7 @@ GameObject:
   - component: {fileID: 2037025413}
   - component: {fileID: 2037025412}
   - component: {fileID: 2037025411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44230,7 +44261,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -44600,7 +44631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   controller: {fileID: 2039111663}
-  speed: 12
+  speed: 8
   gravity: -9.81
   jumpHeight: 2
 --- !u!136 &2039111665
@@ -44640,7 +44671,7 @@ GameObject:
   - component: {fileID: 2074166623}
   - component: {fileID: 2074166622}
   - component: {fileID: 2074166621}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44717,7 +44748,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -44996,7 +45027,7 @@ GameObject:
   - component: {fileID: 2083685789}
   - component: {fileID: 2083685788}
   - component: {fileID: 2083685787}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pared
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45073,7 +45104,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -47386,7 +47417,7 @@ GameObject:
   - component: {fileID: 2100623087}
   - component: {fileID: 2100623086}
   - component: {fileID: 2100623085}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47463,7 +47494,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -47742,7 +47773,7 @@ GameObject:
   - component: {fileID: 2121274001}
   - component: {fileID: 2121274000}
   - component: {fileID: 2121273999}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParedLaberinto (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47819,7 +47850,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 85f5397140970ff4e891a15723356a10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48112,8 +48143,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.5411765, g: 0.627451, b: 0.69803923, a: 1}
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -48571,7 +48602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319254109248486168, guid: 6aa32cf275f2ad14a8bd2653c4e1188c, type: 3}
       propertyPath: m_Speed
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8597616445596889685, guid: 6aa32cf275f2ad14a8bd2653c4e1188c, type: 3}
       propertyPath: player
@@ -48579,7 +48610,7 @@ PrefabInstance:
       objectReference: {fileID: 2039111658}
     - target: {fileID: 8597616445596889685, guid: 6aa32cf275f2ad14a8bd2653c4e1188c, type: 3}
       propertyPath: detectionRange
-      value: 17
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
